@@ -1,0 +1,11 @@
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Cohorts — ChurnLens</title><meta name="description" content="Monthly retention triangle and survival curves across signup cohorts.">
+<link rel="stylesheet" href="core.css"><link rel="stylesheet" href="app.css"></head><body><div id="topbar"></div>
+<main class="shell page">
+  <header class="phead"><div class="eyebrow">Retention cohorts</div><h1>Who <em>sticks</em>.</h1><p class="lede">Each row is a signup cohort; each column a month since. The triangle shows what fraction is still retained — darker red means faster decay.</p></header>
+  <div class="bigstats" id="cstats"></div>
+  <div class="card reveal" style="padding:24px;margin-bottom:22px"><div class="ch" style="padding:0 0 15px"><h2>Retention triangle</h2><span class="k">% retained by month</span></div>
+    <div class="triwrap"><table class="tri" id="tri"></table></div></div>
+  <div class="card reveal" style="padding:24px"><div class="ch" style="padding:0 0 15px"><h2>Survival curves</h2><span class="k">all cohorts</span></div>
+    <div class="chartwrap" style="margin-top:14px"><canvas class="chart" id="curveChart"></canvas></div>
+    <div class="legend"><span><i style="background:var(--acc)"></i>% of cohort retained over months since signup</span></div></div>
+</main><script src="three.min.js"></script><script src="app.js"></script><script src="core.js"></script></body></html>

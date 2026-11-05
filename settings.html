@@ -1,0 +1,11 @@
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Settings — ChurnLens</title><meta name="description" content="Theme, accents and export.">
+<link rel="stylesheet" href="core.css"><link rel="stylesheet" href="app.css"></head><body><div id="topbar"></div>
+<main class="shell page">
+  <header class="phead"><div class="eyebrow">Settings</div><h1>Your data, <em>your device</em>.</h1><p class="lede">Every score is computed locally. Nothing about your accounts is ever uploaded.</p></header>
+  <div class="card reveal" style="max-width:640px">
+    <div class="setrow"><div><div class="si">Light mode</div><div class="sd">Toggle the theme (or press T)</div></div><div class="toggle" id="themeToggle"></div></div>
+    <div class="setrow"><div><div class="si">Accent</div><div class="sd">Recolor the interface</div></div><div class="accents" id="accents2"></div></div>
+    <div class="setrow"><div><div class="si">Export scores</div><div class="sd">Download account risk scores as JSON</div></div><button class="ghost" id="exp">Export</button></div>
+  </div>
+  <div class="feat" id="featlist" style="margin-top:40px"></div>
+</main><script src="three.min.js"></script><script src="app.js"></script><script src="core.js"></script></body></html>

@@ -1,0 +1,19 @@
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Customers — ChurnLens</title><meta name="description" content="Every account scored and ranked by churn risk, with explainable risk factors.">
+<link rel="stylesheet" href="core.css"><link rel="stylesheet" href="app.css"></head><body><div id="topbar"></div>
+<main class="shell page">
+  <header class="phead"><div class="eyebrow">Accounts</div><h1>Who's <em>leaving</em>.</h1><p class="lede">Every account scored by the churn model and ranked by risk. Click one to see the factors driving it and the recommended play.</p></header>
+  <div class="bigstats" id="summary"></div>
+  <div class="row" style="justify-content:space-between;margin-bottom:18px;gap:12px">
+    <label class="pill" style="gap:10px;cursor:text"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="q" placeholder="Search accounts…" style="background:none;border:none;outline:none;color:var(--ink);width:150px"></label>
+    <div class="row" style="gap:10px"><div class="seg" id="rseg"><button class="on" data-r="all">All</button><button data-r="high">High</button><button data-r="med">Med</button><button data-r="low">Low</button></div><div class="seg" id="sortseg"><button class="on" data-s="risk">Risk</button><button data-s="mrr">MRR</button><button data-s="name">A–Z</button></div></div>
+  </div>
+  <div class="clist" id="clist"></div>
+</main>
+<div class="scrim" id="drawer"><div class="modal drawer-s">
+  <h3 id="dname">Account<button class="close" id="dclose"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></h3>
+  <div class="cp" id="dmeta" style="font-family:var(--mono);font-size:12px;color:var(--mut);margin-bottom:16px"></div>
+  <div id="drisk" style="margin-bottom:20px"></div>
+  <div class="eyebrow" style="margin-bottom:10px">Risk factors</div><div id="dfactors"></div>
+  <div class="verdict" style="margin-top:18px;background:var(--panel2);border:1px solid var(--hair);border-radius:12px;padding:14px 16px;font-size:13.5px;color:var(--ink2)" id="drec"></div>
+</div></div>
+<script src="three.min.js"></script><script src="app.js"></script><script src="core.js"></script></body></html>

@@ -1,0 +1,18 @@
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Simulator — ChurnLens</title><meta name="description" content="Pull a retention lever and watch the model re-score every account against real revenue.">
+<link rel="stylesheet" href="core.css"><link rel="stylesheet" href="app.css"></head><body><div id="topbar"></div>
+<main class="shell page">
+  <header class="phead"><div class="eyebrow">What-if simulator</div><h1>Model the <em>save</em>.</h1><p class="lede">Each lever changes a feature the churn model actually uses, then re-scores all 40 accounts live. See how many you'd save and the revenue it protects — before you spend on the play.</p></header>
+  <div class="bigresult" id="result"></div>
+  <div class="grid2">
+    <div class="card reveal" style="padding:24px"><div class="ch" style="padding:0 0 15px"><h2>Retention levers</h2><button class="ghost" id="reset">Reset</button></div>
+      <div class="lever" style="margin-top:14px"><div class="lh"><span class="ln">Product engagement</span><span class="lv" id="lEngV">+0%</span></div><div class="slider"><span>0</span><input type="range" id="lEng" min="0" max="0.35" step="0.01" value="0"><span>+35%</span></div></div>
+      <div class="lever"><div class="lh"><span class="ln">Price reduction</span><span class="lv" id="lPriceV">-0%</span></div><div class="slider"><span>0</span><input type="range" id="lPrice" min="0" max="0.4" step="0.01" value="0"><span>-40%</span></div></div>
+      <div class="lever"><div class="lh"><span class="ln">Satisfaction (NPS) boost</span><span class="lv" id="lNpsV">+0.0</span></div><div class="slider"><span>0</span><input type="range" id="lNps" min="0" max="3" step="0.1" value="0"><span>+3</span></div></div>
+      <div class="lever"><div class="lh"><span class="ln">Proactive support</span><span class="lv" id="lTicketsV">-0.0</span></div><div class="slider"><span>0</span><input type="range" id="lTickets" min="0" max="3" step="0.1" value="0"><span>-3 tickets</span></div></div>
+    </div>
+    <div class="col">
+      <div class="card reveal" style="padding:24px"><div class="ch" style="padding:0 0 15px"><h2>Retention curve</h2><span class="k">before vs after</span></div><div class="chartwrap" style="margin-top:14px"><canvas class="chart" id="simChart"></canvas></div><div class="legend"><span><i style="background:var(--rose)"></i>current</span><span><i style="background:var(--grn)"></i>with levers</span></div></div>
+      <div class="card reveal" style="padding:24px"><div class="ch" style="padding:0 0 10px"><h2>Impact</h2></div><div id="simkv" style="margin-top:8px"></div></div>
+    </div>
+  </div>
+</main><script src="three.min.js"></script><script src="app.js"></script><script src="core.js"></script></body></html>
